@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS ONLY FOR FILE DOWNLOAD PART */
+        .file-downloads {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .download-btn {
+            background: #27ae60;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .download-btn:hover {
+            background: #219652;
+            transform: translateY(-3px);
+        }
+        
+        .file-icon {
+            font-size: 1.5rem;
+        }
+
+        .ppt-info {
+            background: rgba(255,255,255,0.9);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .ppt-info .file-name {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.2rem;
+        }
+
+        .ppt-info .file-size {
+            color: #7f8c8d;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+        <p>Showcasing my work and creations</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="skills.html">Skills</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="section">
+            <h2>Database Projects</h2>
+            
+            <!-- Database Project -->
+            <div class="project-card">
+                <h3>🗃️ Student Management Database System</h3>
+                <p><strong>Technologies Used:</strong> MySQL, PHP, HTML, CSS</p>
+                <p>A comprehensive database system for managing student information, courses, and academic records at Wolayita Sodo University.</p>
+                
+                <div class="project-features">
+                    <p><strong>Features:</strong></p>
+                    <ul>
+                        <li>Student registration and profile management</li>
+                        <li>Course enrollment system</li>
+                        <li>Grade tracking and reporting</li>
+                        <li>Database normalization</li>
+                        <li>User authentication and authorization</li>
+                    </ul>
+                </div>
+            
+            </div>
+
+            <!-- Web Development Project -->
+            <div class="project-card">
+                <h3>🌐 Personal Portfolio Website</h3>
+                <p><strong>Technologies Used:</strong> HTML5, CSS3, JavaScript</p>
+                <p>A responsive personal website showcasing my skills, education, and projects with modern design and smooth navigation.</p>
+                
+                <div class="project-features">
+                    <p><strong>Features:</strong></p>
+                    <ul>
+                        <li>Fully responsive design</li>
+                        <li>Smooth navigation</li>
+                        <li>Clean and professional layout</li>
+                        <li>Cross-browser compatible</li>
+                        <li>Mobile-friendly interface</li>
+                    </ul>
+                </div>
+            
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Academic Database Projects</h2>
+            
+            <div class="project-card">
+                <h3>🎓 University Database Design</h3>
+                <p><strong>Technologies Used:</strong> MySQL, Normalization, ER Modeling</p>
+                <p>Database design project for university management system including entity-relationship diagrams and normalized tables.</p>
+                
+                <div class="project-features">
+                    <p><strong>Database Components:</strong></p>
+                    <ul>
+                        <li>Entity-Relationship Diagrams (ERD)</li>
+                        <li>Normalized database schema</li>
+                        <li>SQL queries and stored procedures</li>
+                        <li>Data integrity constraints</li>
+                        <li>Backup and recovery procedures</li>
+                    </ul>
+                </div>
+                
+                <!-- Single PPT Download -->
+                <div class="file-downloads">
+                    <h4>📥 Download Project Presentation</h4>
+                    <div class="ppt-info">
+                        <div class="file-name">University Database Design</div>
+                        <div class="file-size">PowerPoint File • 4.1 MB</div>
+                        <p>Includes ER diagrams, schema design, and implementation code</p>
+                    </div>
+                    <a href="MY  Current project.pptx" download class="download-btn">
+                        <span class="file-icon">📊</span>
+                        Download PPT Presentation
+                    </a>
+                </div>
+            </div>
+        </div>
+
+      
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; tgtg70559@gmail.com. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Download tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadButtons = document.querySelectorAll('.download-btn');
+            downloadButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const fileName = this.getAttribute('href').split('/').pop();
+                    alert('Download started: ' + fileName + '\nThank you for your interest in my projects!');
+                });
+            });
+            
+            // Add current year to footer
+            const currentYear = new Date().getFullYear();
+            const footer = document.querySelector('footer p');
+            if (footer) {
+                footer.innerHTML = `&copy; ${currentYear} Tigist Wolde. All rights reserved.`;
+            }
+        });
+    </script>
+</body>
+</html>
